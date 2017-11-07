@@ -1,3 +1,3 @@
 base:
-    '*':
-        - states.users.add
+    'proxy':
+        - states.proxy.add
