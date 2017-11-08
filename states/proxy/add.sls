@@ -3,3 +3,9 @@ write the haproxy config:
   - name: /etc/haproxy/haproxy.cfg
   - source: salt://files/haproxy.jinja
   - template: jinja
+
+
+  restart haproxy:
+    service.running:
+        - enable: True
+        - reload: True
