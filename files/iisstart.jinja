@@ -1,0 +1,8 @@
+<html>
+ <head> 
+  <TITLE>Serving from {{ grains['host'] }}</TITLE>
+ </head>
+    <h1>Hi From Node: {{ grains['host'] }} </h1>
+        Ip Address: {{ grains['ipv4'][1] }}
+
+</html>
