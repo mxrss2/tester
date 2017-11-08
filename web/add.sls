@@ -1,7 +1,7 @@
 write the haproxy config:
  file.managed:
   - name: C:\inetpub\wwwroot\iisstart.htm
-  - source: salt://files/iisstart.jinja
+  - source: salt://web/iisstart.jinja
   - template: jinja
 
 ssp/loadbalaencer/pool/update:

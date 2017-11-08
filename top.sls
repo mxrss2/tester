@@ -1,5 +1,5 @@
 base:
     'proxy':
-        - states.proxy.add
+        - proxy.add
     'Web*':
-        - states.web.add
+        - web.add
