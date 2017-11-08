@@ -45,7 +45,7 @@ backend nodes
     http-request add-header X-Forwarded-Proto https if { ssl_fc }
     option httpchk HEAD / HTTP/1.1\r\nHost:localhost
     {% for server, addr in salt['mine.get']('Web*', 'network.ip_addrs', expr_form='compound').items() -%}
-        server {{ server }} {{ addr }}
+        server {{ server }} {{ addr[1] }} check
     {% endfor -%}
 
 
