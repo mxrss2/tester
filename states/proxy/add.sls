@@ -5,7 +5,7 @@ write the haproxy config:
   - template: jinja
 
 
-  restart haproxy:
-    service.running:
-        - enable: True
-        - reload: True
+restart haproxy:
+ service.running:
+   - enable: True
+   - reload: True
