@@ -1,3 +1,9 @@
+stop the service:
+  service.dead:
+    - name: haproxy
+
+
+
 write the haproxy config:
  file.managed:
   - name: /etc/haproxy/haproxy.cfg
