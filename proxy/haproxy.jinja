@@ -32,6 +32,20 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
+
+listen stats
+        mode http
+        log global
+        maxconn 10
+        stats enable
+        stats hide-version
+        stats refresh 30s
+        stats show-node
+        stats auth admin:password
+        stats uri /haproxy?stats
+        bind *:3001
+
+
 frontend localnodes
     bind *:80
     mode http
